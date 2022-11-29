@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 
 const Statistics = ({ title = 'Upload stats', stats }) => {
     return (<StatisticsCard>
-  <Title>{title}</Title>
+        {title&&<Title>{title}</Title>}
         <StatList>
             {stats.map(({ id, label, percentage }) =>
                 <StatisticsItem key={id}>
@@ -26,9 +26,9 @@ Statistics.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.string,
-            label: PropTypes.string,
-            percentage: PropTypes.number,
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
         })
     )
 }

@@ -6,13 +6,17 @@ import Container from "components/App.styled";
 import data from "../Data/data.json";
 import friends from "../Data/friends.json";
 import transactions from "../Data/transactions.json";
-import userData from "../Data/user.json";
+import user from "../Data/user.json";
 
 
 export const App = () => {
   return (
     <Container>
-      <Profile user={userData} />
+      <Profile username={user.username}
+              tag={user.tag}
+              location={user.location}
+              avatar={user.avatar}
+              stats={user.stats} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} /> 
