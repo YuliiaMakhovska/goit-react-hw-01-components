@@ -18,6 +18,7 @@ export const StatisticsCard = styled.section`
 `;
 export const Title = styled.h2`
   text-aline: center;
+  text-transform: upperCase;
 `;
 export const StatList = styled.ul`
   display: flex;

@@ -7,9 +7,9 @@ import {
 } from 'components/Statistics/Statistics.styled'
 import PropTypes from 'prop-types';
 
-const Statistics = ({ title = 'Upload stats', stats }) => {
+const Statistics = ({ title, stats }) => {
     return (<StatisticsCard>
-        {title&&<Title>{title}</Title>}
+        {title && <Title>{title}</Title>}
         <StatList>
             {stats.map(({ id, label, percentage }) =>
                 <StatisticsItem key={id}>
